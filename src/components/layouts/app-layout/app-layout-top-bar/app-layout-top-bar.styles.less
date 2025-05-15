@@ -1,0 +1,29 @@
+.app-layout-top-bar {
+  display: grid;
+  grid-template-columns: var(--app-layout-sidebar-width) min-content auto;
+  grid-column-gap: 40px;
+  padding: 0 40px 0 0;
+}
+
+.app-layout-top-bar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 23px 36px;
+}
+
+.app-layout-top-bar-logo__icon {
+  width: 185px;
+  height: 18px;
+  color: @white;
+}
+
+.app-layout-top-bar-menu {
+  display: flex;
+  justify-self: flex-end;
+}
+
+.app-layout-top-bar-studios,
+.app-layout-top-bar-menu__dropdown {
+  height: 100%;
+}

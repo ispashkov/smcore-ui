@@ -1,0 +1,31 @@
+.app-layout {
+  position: relative;
+  --app-layout-header-height: 64px;
+  --app-layout-header-zIndex: 10;
+  --app-layout-sidebar-width: 260px;
+}
+
+.app-layout__header {
+  height: var(--app-layout-header-height);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--app-layout-header-zIndex);
+}
+
+.app-layout__sidebar.ant-layout-sider {
+  width: var(--app-layout-sidebar-width);
+  height: calc(100% - var(--app-layout-header-height));
+  position: fixed;
+  top: var(--app-layout-header-height);
+  z-index: var(--app-layout-header-zIndex);
+}
+
+.app-layout__content {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--app-layout-header-height) + 30px) 40px 30px;
+  min-height: 100vh;
+  margin-left: var(--app-layout-sidebar-width);
+}
